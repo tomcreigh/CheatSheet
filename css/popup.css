@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
     font-family: 'Roboto', sans-serif;
+    color: #194569;
     /* ******************** */
     width: 280px;
     background-color: #FFFFFF;
@@ -9,10 +10,114 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
+    /* border: solid red 1px; */
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    /* border: solid red 1px; */
+}
+
+h4,
+a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    /* border: solid red 1px; */
+}
+
+h5 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ************************************************************************* Header */
+
+#header {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    /* internal layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 16px;
 }
 
 
 /* ************************************************************************* content */
+
+#content {
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    /* internal layout */
+    padding: 0 16px;
+    /* border: solid red 1px; */
+}
+
+.list_group {
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    /* ******************** */
+    border-bottom: 1px solid #91AEC4;
+    /* internal layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+}
+
+.list_element {
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    /* internal layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+}
+
+
+/* .list_element:hover {
+    background-color: #DBECF4;
+} */
+
+.stacked_text {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+    /* internal layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+#current_font {
+    display: none;
+}
 
 
 /* ************************************************************************* actions */
@@ -22,7 +127,7 @@ body {
     order: 1;
     align-self: stretch;
     flex-grow: 0;
-    padding: 24px 24px 24px 16px;
+    padding: 24px;
     /* internal layout */
     display: flex;
     flex-direction: row;
@@ -39,6 +144,7 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    cursor: pointer;
     /* internal layout */
     display: flex;
     flex-direction: row;
