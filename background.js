@@ -1,8 +1,8 @@
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.action.setBadgeText({
-        text: "OFF",
-    });
-});
+// chrome.runtime.onInstalled.addListener(() => {
+//     chrome.action.setBadgeText({
+//         text: "OFF",
+//     });
+// });
 
 const extensions = 'https://developer.chrome.com/docs/extensions'
 const webstore = 'https://developer.chrome.com/docs/webstore'
@@ -37,3 +37,10 @@ chrome.action.onClicked.addListener(async(tab) => {
         }
     }
 });
+
+
+// ************************************************************** Change Font
+// ************************************************************** Remove Distractions
+// ************************************************************** Restructure Text
+// ************************************************************** Diplay Number Text
+// ************************************************************** Enable Sticky Tabs

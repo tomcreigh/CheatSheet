@@ -9,8 +9,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    margin: 0;
     /* border: solid red 1px; */
+}
+
+img {
+    pointer-events: none
+}
+
+img,
+h3,
+h4,
+h5,
+a,
+span {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 h3 {
@@ -18,7 +36,6 @@ h3 {
     font-size: 16px;
     line-height: 24px;
     margin: 0;
-    /* border: solid red 1px; */
 }
 
 h4,
@@ -27,7 +44,6 @@ a {
     font-size: 14px;
     line-height: 20px;
     margin: 0;
-    /* border: solid red 1px; */
 }
 
 h5 {
@@ -46,9 +62,7 @@ a {
 
 #header {
     flex: none;
-    order: 0;
     align-self: stretch;
-    flex-grow: 0;
     /* internal layout */
     display: flex;
     flex-direction: column;
@@ -62,17 +76,14 @@ a {
 
 #content {
     flex: none;
-    order: 1;
     align-self: stretch;
     flex-grow: 0;
     /* internal layout */
     padding: 0 16px;
-    /* border: solid red 1px; */
 }
 
 .list_group {
     flex: none;
-    order: 1;
     align-self: stretch;
     flex-grow: 0;
     /* ******************** */
@@ -86,7 +97,6 @@ a {
 
 .list_element {
     flex: none;
-    order: 1;
     align-self: stretch;
     flex-grow: 0;
     /* internal layout */
@@ -94,17 +104,18 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 8px;
+    padding: 8px;
+    /* animation */
+    transition: 0.3s;
 }
 
-
-/* .list_element:hover {
+.list_element:hover {
     background-color: #DBECF4;
-} */
+    transition: 0.3s;
+}
 
 .stacked_text {
     flex: none;
-    order: 0;
     align-self: stretch;
     flex-grow: 1;
     /* internal layout */
@@ -119,12 +130,34 @@ a {
     display: none;
 }
 
+#dropdown_menu {
+    /* internal layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+.dropdown_element {
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    /* ******************** */
+    border: none;
+    background: none;
+    text-align: start;
+}
+
+.arrow_hide {
+    display: none;
+}
+
 
 /* ************************************************************************* actions */
 
 #actions {
     flex: none;
-    order: 1;
     align-self: stretch;
     flex-grow: 0;
     padding: 24px;
@@ -152,8 +185,113 @@ a {
     align-items: center;
     padding: 0px;
     gap: 8px;
+    /* animation */
+    transition: 0.3s;
+}
+
+#settings:hover {
+    color: #194569;
+    transition: 0.3s;
 }
 
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+
+/* ***************************************** */
+
+.toggle {
+    cursor: pointer;
+    /* display: inline-block; */
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #DBECF4;
+    border: solid 2px #79747E;
+    border-radius: 18px;
+    width: 52px;
+    height: 32px;
+    position: relative;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+.toggle-switch:before,
+.toggle-switch:after {
+    content: "";
+}
+
+.toggle-switch:before {
+    display: block;
+    background: #79747E;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background: #5F84A2;
+    border: solid 2px #79747e00;
+    transition: 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-switch:before {
+    left: 24px;
+    background: white;
+    transition: 0.3s;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.toggle-label {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+
+/* ***************************************************************** */
+
+#dropdown_toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1em;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    border: solid red 1px;
+}
+
+ul {
+    padding-left: 0;
+    margin-top: 0;
+    background: White;
+    list-style: none;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    /* align-self: stretch; */
+    /* width: 100%; */
+    position: absolute;
+    border: solid red 1px;
+}
+
+ul li {
+    position: relative;
+    display: inline-block;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0 0 0.25rem 0;
+    transition: 3s;
+    border: solid red 1px;
+    align-self: stretch;
 }

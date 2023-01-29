@@ -10,7 +10,7 @@
 
 <body>
     <div id="header">
-        <img src="img/logo_small.png" alt="logo">
+        <img draggable="false" src="img/logo_small.png" alt="logo">
         <h4>Set you preferences (copy tbc)</h4>
     </div>
     <div id="content">
@@ -20,46 +20,68 @@
                     <h5 id="current_font">Public Sans</h5>
                     <h3>Font</h3>
                 </div>
-                <span class="material-symbols-outlined">arrow_right</span>
+                <span class="material-symbols-outlined">arrow_drop_down</span>
             </div>
+
+            <!-- ***************************************************************** -->
+            <!-- <div id="dropdown_menu">
+                <input id="dropdown_toggle" type="checkbox" checked>
+
+                <div class="list_element">
+                    <div class="stacked_text">
+                        <h5 id="current_font">Public Sans</h5>
+                        <h3>Font</h3>
+                    </div>
+                    <span class="material-symbols-outlined">arrow_drop_down</span>
+                </div>
+
+                <ul>
+                    <li>
+                        <button class="dropdown_element"><h3>Public Sans</h3></button>
+                    </li>
+                    <li>
+                        <button class="dropdown_element"><h3>Roboto</h3></button>
+                    </li>
+                    <li>
+                        <button class="dropdown_element"><h3>OpenDyslexic</h3></button>
+                    </li>
+                    <li>
+                        <button class="dropdown_element"><h3>Clear</h3></button>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- ***************************************************************** -->
+
         </div>
         <div class="list_group">
-            <div class="list_element">
+            <label class="list_element toggle">
                 <h3>Remove distractions</h3>
-                <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-            </div>
-            <div class="list_element">
+                <input class="toggle-checkbox" type="checkbox">
+                <div class="toggle-switch"></div>
+            </label>
+            <label class="list_element toggle">
                 <h3>Restructure text</h3>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+                <input class="toggle-checkbox" type="checkbox">
+                <div class="toggle-switch"></div>
+            </label>
         </div>
         <div class="list_group">
-            <div class="list_element">
+            <label class="list_element toggle">
                 <div class="stacked_text">
                     <h3>Display number text</h3>
                     <h4>Hover over numbers</h4>
                 </div>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-            <div class="list_element">
+                <input class="toggle-checkbox" type="checkbox">
+                <div class="toggle-switch"></div>
+            </label>
+            <label class="list_element toggle">
                 <div class="stacked_text">
                     <h3>Enable Sticky Tabs</h3>
                     <h4>tab + click to place</h4>
                 </div>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+                <input class="toggle-checkbox" type="checkbox">
+                <div class="toggle-switch"></div>
+            </label>
         </div>
     </div>
     <div id="actions">
