@@ -13,11 +13,3 @@ main .toc-container {
 * {
     font-family: "Comic Sans MS", "Comic Sans", cursive !important;
 }
-
-
-/* reset margins */
-
-main> :last-child {
-    margin-top: min(10vmax, 10rem);
-    margin-bottom: min(10vmax, 10rem);
-}
