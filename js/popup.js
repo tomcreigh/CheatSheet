@@ -8,23 +8,7 @@ const display_num_text = document.getElementById('display_num_text_checkbox');
 const enable_sticky_tabs = document.getElementById('enable_sticky_tabs_checkbox');
 const settings = document.getElementById('actions');
 
-// ************************************************************** Font Dropdown Menu
-const font_button = document.getElementById('font_button');
-const font_dropdown = document.getElementById('font_dropdown');
-const font_arrow = document.getElementById('font_arrow');
-
-font_button.addEventListener('click', () => {
-    if (!font_dropdown.classList.contains('show')) {
-        font_dropdown.classList.toggle('show');
-        font_button.classList.toggle('selected');
-        font_arrow.classList.toggle('rotate');
-    } else {
-        font_dropdown.classList.toggle('show');
-        font_button.classList.toggle('selected');
-        font_arrow.classList.toggle('rotate');
-    }
-});
-
+// ************************************************************** Comunication Layer
 // ************************************************************** Change Font
 public_sans.addEventListener('click', () => {
     chrome.runtime.sendMessage('', {
@@ -113,4 +97,52 @@ settings.addEventListener('click', () => {
         type: 'pass',
         message: 'settings'
     });
+});
+
+// ************************************************************** Font Dropdown Menu
+const font_button = document.getElementById('font_button');
+const font_dropdown = document.getElementById('font_dropdown');
+const font_arrow = document.getElementById('font_arrow');
+
+font_button.addEventListener('click', () => {
+    if (!font_dropdown.classList.contains('show')) {
+        font_dropdown.classList.toggle('show');
+        font_button.classList.toggle('selected');
+        font_arrow.classList.toggle('rotate');
+    } else {
+        font_dropdown.classList.toggle('show');
+        font_button.classList.toggle('selected');
+        font_arrow.classList.toggle('rotate');
+    }
+});
+
+// ************************************************************** onload
+// ************************************************************** set checked
+function SetChecked(key) {
+    console.log(key);
+    document.getElementById(key + '_checkbox').checked = true;
+}
+
+// ************************************************************** set font
+function SetFont(key) {
+    console.log(key);
+}
+
+// ************************************************************** check local storage
+chrome.runtime.onMessage.addListener(data => {
+    if (data.type === 'load') {
+        // console.log('test');
+        chrome.storage.local.get(null, (items) => {
+            var allKeys = Object.keys(items);
+            allKeys.forEach((key) => {
+                if (key == 'font') {
+                    chrome.storage.local.get(key, (item) => {
+                        SetFont(Object.values(item)[0]);
+                    });
+                } else {
+                    SetChecked(key);
+                };
+            });
+        });
+    };
 });
