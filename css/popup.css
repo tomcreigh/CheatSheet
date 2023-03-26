@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #194569;
     /* ******************** */
     width: 280px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     /* internal layout */
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@ body {
 }
 
 img {
-    pointer-events: none
+    pointer-events: none;
 }
 
 img,
@@ -35,6 +35,10 @@ h3 {
     font-size: 16px;
     line-height: 24px;
     margin: 0;
+}
+
+h3:hover {
+    background-color: #5f84a2;
 }
 
 h4,
@@ -86,7 +90,7 @@ a {
     align-self: stretch;
     flex-grow: 0;
     /* ******************** */
-    border-bottom: 1px solid #91AEC4;
+    border-bottom: 1px solid #91aec4;
     /* internal layout */
     display: flex;
     flex-direction: column;
@@ -109,7 +113,7 @@ a {
 }
 
 .list_element:hover {
-    background-color: #DBECF4;
+    background-color: #dbecf4;
     transition: 0.3s;
 }
 
@@ -127,6 +131,34 @@ a {
 
 #current_font {
     display: none;
+}
+
+
+/* ***************************************************************** */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* top: 10.25em; */
+    /* width: 100%; */
+    background-color: #ffffff;
+    overflow: auto;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.show {
+    display: block;
+}
+
+.selected {
+    background-color: #dbecf4;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 0.3s;
 }
 
 
@@ -149,7 +181,7 @@ a {
     background: none;
     border: none;
     /* ******************** */
-    color: #5F84A2;
+    color: #5f84a2;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -171,7 +203,7 @@ a {
 }
 
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 
@@ -184,8 +216,8 @@ a {
 
 .toggle-switch {
     display: inline-block;
-    background: #DBECF4;
-    border: solid 2px #79747E;
+    background: #dbecf4;
+    border: solid 2px #79747e;
     border-radius: 18px;
     width: 52px;
     height: 32px;
@@ -201,7 +233,7 @@ a {
 
 .toggle-switch:before {
     display: block;
-    background: #79747E;
+    background: #79747e;
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -212,7 +244,7 @@ a {
 }
 
 .toggle-checkbox:checked+.toggle-switch {
-    background: #5F84A2;
+    background: #5f84a2;
     border: solid 2px #79747e00;
     transition: 0.3s;
 }
@@ -232,32 +264,4 @@ a {
     margin-left: 5px;
     position: relative;
     top: 2px;
-}
-
-
-/* ***************************************************************** */
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 10.25em;
-    background-color: #FFFFFF;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    z-index: 1;
-}
-
-.show {
-    display: block;
-}
-
-.selected {
-    background-color: #DBECF4;
-}
-
-.rotate {
-    transform: rotate(180deg);
-    transition: 0.3s;
 }

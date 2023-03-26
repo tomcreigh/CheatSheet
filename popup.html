@@ -3,15 +3,16 @@
 
 <head>
     <title>CheatSheet</title>
-    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/popup.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <div id="header">
-        <img draggable="false" src="img/logo_small.png" alt="logo">
+        <img draggable="false" src="img/logo_small.png" alt="logo" />
         <h4>Get your browser working for you</h4>
     </div>
+
     <div id="content">
         <div class="list_group">
             <!-- ************************************************************** Change Font -->
@@ -34,68 +35,53 @@
                     <h3>Clear</h3>
                 </div>
             </div>
-
-            <!-- ***************************************************************** -->
-
-            <!-- <ul>
-                <li>
-                    <button class="dropdown_element"><h3>Public Sans</h3></button>
-                </li>
-                <li>
-                    <button class="dropdown_element"><h3>Roboto</h3></button>
-                </li>
-                <li>
-                    <button class="dropdown_element"><h3>OpenDyslexic</h3></button>
-                </li>
-                <li>
-                    <button class="dropdown_element"><h3>Clear</h3></button>
-                </li>
-            </ul> -->
-            <!-- ***************************************************************** -->
-
         </div>
+
         <div class="list_group">
             <!-- ************************************************************** Remove Distractions -->
+
             <label class="list_element toggle">
-                <h3>Remove distractions</h3>
-                <input class="toggle-checkbox" id="remove_distractions_checkbox" type="checkbox">
-                <div class="toggle-switch"></div>
-            </label>
+            <h3>Remove distractions</h3>
+            <input class="toggle-checkbox" id="remove_distractions_checkbox" type="checkbox"/>
+            <div class="toggle-switch"></div>
+          </label>
             <!-- ************************************************************** Restructure Text -->
             <label class="list_element toggle">
-                <h3>Restructure text</h3>
-                <input class="toggle-checkbox" id="restructure_text_checkbox" type="checkbox">
-                <div class="toggle-switch"></div>
-            </label>
+            <h3>Restructure text</h3>
+            <input class="toggle-checkbox" id="restructure_text_checkbox" type="checkbox"/>
+            <div class="toggle-switch"></div>
+          </label>
         </div>
+
         <div class="list_group">
             <!-- ************************************************************** Diplay Number Text -->
             <label class="list_element toggle">
-                <div class="stacked_text">
-                    <h3>Display number text</h3>
-                    <h4>Hover over numbers</h4>
-                </div>
-                <input class="toggle-checkbox" id="display_num_text_checkbox" type="checkbox">
-                <div class="toggle-switch"></div>
-            </label>
+            <div class="stacked_text">
+              <h3>Display number text</h3>
+              <h4>Hover over numbers</h4>
+            </div>
+            <input class="toggle-checkbox" id="display_num_text_checkbox" type="checkbox"/>
+            <div class="toggle-switch"></div>
+          </label>
+
             <!-- ************************************************************** Enable Sticky Tabs -->
             <label class="list_element toggle">
-                <div class="stacked_text">
-                    <h3>Enable Sticky Tabs</h3>
-                    <h4>Ctrl + click to place</h4>
-                </div>
-                <input class="toggle-checkbox" id="enable_sticky_tabs_checkbox" type="checkbox">
-                <div class="toggle-switch"></div>
-            </label>
+            <div class="stacked_text">
+              <h3>Enable Sticky Tabs</h3>
+              <h4>Ctrl + click to place</h4>
+            </div>
+            <input class="toggle-checkbox" id="enable_sticky_tabs_checkbox" type="checkbox"/>
+            <div class="toggle-switch"></div>
+          </label>
         </div>
     </div>
+
     <div id="actions">
         <a href="#" id="settings">
             <span class="material-symbols-outlined">settings</span> Settings
         </a>
     </div>
     <script src="./js/popup.js"></script>
-
 </body>
 
 </html>
