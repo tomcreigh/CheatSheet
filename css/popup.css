@@ -2,10 +2,8 @@
 body {
     font-family: "Roboto", sans-serif;
     color: #194569;
-    /* ******************** */
     width: 280px;
     background-color: #ffffff;
-    /* internal layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -37,10 +35,6 @@ h3 {
     margin: 0;
 }
 
-h3:hover {
-    background-color: #5f84a2;
-}
-
 h4,
 a {
     font-weight: 400;
@@ -66,7 +60,6 @@ a {
 #header {
     flex: none;
     align-self: stretch;
-    /* internal layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -81,7 +74,6 @@ a {
     flex: none;
     align-self: stretch;
     flex-grow: 0;
-    /* internal layout */
     padding: 0 16px;
 }
 
@@ -89,9 +81,7 @@ a {
     flex: none;
     align-self: stretch;
     flex-grow: 0;
-    /* ******************** */
     border-bottom: 1px solid #91aec4;
-    /* internal layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -102,13 +92,11 @@ a {
     flex: none;
     align-self: stretch;
     flex-grow: 0;
-    /* internal layout */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 8px;
-    /* animation */
     transition: 0.3s;
 }
 
@@ -121,12 +109,11 @@ a {
     flex: none;
     align-self: stretch;
     flex-grow: 1;
-    /* internal layout */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0;
 }
 
 #current_font {
@@ -134,22 +121,36 @@ a {
 }
 
 
-/* ***************************************************************** */
+/* ************************************************************************* dropdown menu */
+
+#dropdown_container {
+    width: 100%;
+    padding: 0 1px;
+}
 
 .dropdown-content {
     display: none;
     position: absolute;
-    /* top: 10.25em; */
-    /* width: 100%; */
+    width: 246px;
+    padding: 8px 0;
     background-color: #ffffff;
     overflow: auto;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    /* border-radius: 4px; */
     z-index: 1;
 }
 
+.font_list {
+    padding: 16px;
+}
+
+.font_list:hover {
+    background-color: #dbecf4;
+    transition: 0.3s;
+}
+
 .show {
-    display: block;
+    display: block !important;
 }
 
 .selected {
@@ -169,7 +170,6 @@ a {
     align-self: stretch;
     flex-grow: 0;
     padding: 24px;
-    /* internal layout */
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -177,23 +177,19 @@ a {
 }
 
 #settings {
-    /* clear button */
     background: none;
     border: none;
-    /* ******************** */
     color: #5f84a2;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     cursor: pointer;
-    /* internal layout */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0px;
     gap: 8px;
-    /* animation */
     transition: 0.3s;
 }
 
@@ -207,11 +203,10 @@ a {
 }
 
 
-/* ***************************************** */
+/* ************************************************************************* toggle checkboxes */
 
 .toggle {
     cursor: pointer;
-    /* display: inline-block; */
 }
 
 .toggle-switch {

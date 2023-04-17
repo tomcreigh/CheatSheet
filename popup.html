@@ -10,7 +10,9 @@
 <body>
     <div id="header">
         <img draggable="false" src="img/logo_small.png" alt="logo" />
-        <h4>Get your browser working for you</h4>
+        <h4>Get your browser working your way
+            <br> (Beta test build)
+        </h4>
     </div>
 
     <div id="content">
@@ -23,16 +25,18 @@
                 </div>
                 <span id="font_arrow" class="material-symbols-outlined">arrow_drop_down</span>
             </div>
-            <div id="font_dropdown" class="dropdown-content">
-                <div id="public_sans">
-                    <h3>Public Sans</h3>
-                </div>
-                <div id="roboto">
-                    <h3>Roboto</h3>
-                </div>
-                <!-- <h3>OpenDyslexic</h3> -->
-                <div id="clear">
-                    <h3>Clear</h3>
+            <div id="dropdown_container">
+                <div id="font_dropdown" class="dropdown-content">
+                    <div id="public_sans" class="font_list">
+                        <h3>Public Sans</h3>
+                    </div>
+                    <div id="roboto" class="font_list">
+                        <h3>Roboto</h3>
+                    </div>
+                    <!-- <h3>OpenDyslexic</h3> -->
+                    <div id="clear" class="font_list">
+                        <h3>Clear</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,38 +45,54 @@
             <!-- ************************************************************** Remove Distractions -->
 
             <label class="list_element toggle">
-            <h3>Remove distractions</h3>
-            <input class="toggle-checkbox" id="remove_distractions_checkbox" type="checkbox"/>
-            <div class="toggle-switch"></div>
-          </label>
+          <h3>Remove distractions</h3>
+          <input
+            class="toggle-checkbox"
+            id="remove_distractions_checkbox"
+            type="checkbox"
+          />
+          <div class="toggle-switch"></div>
+        </label>
             <!-- ************************************************************** Restructure Text -->
             <label class="list_element toggle">
-            <h3>Restructure text</h3>
-            <input class="toggle-checkbox" id="restructure_text_checkbox" type="checkbox"/>
-            <div class="toggle-switch"></div>
-          </label>
+          <h3>Restructure text</h3>
+          <input
+            class="toggle-checkbox"
+            id="restructure_text_checkbox"
+            type="checkbox"
+          />
+          <div class="toggle-switch"></div>
+        </label>
         </div>
 
         <div class="list_group">
             <!-- ************************************************************** Diplay Number Text -->
             <label class="list_element toggle">
-            <div class="stacked_text">
-              <h3>Display number text</h3>
-              <h4>Hover over numbers</h4>
-            </div>
-            <input class="toggle-checkbox" id="display_num_text_checkbox" type="checkbox"/>
-            <div class="toggle-switch"></div>
-          </label>
+          <div class="stacked_text">
+            <h3>Enable number text</h3>
+            <h4>Highlight the number</h4>
+          </div>
+          <input
+            class="toggle-checkbox"
+            id="display_num_text_checkbox"
+            type="checkbox"
+          />
+          <div class="toggle-switch"></div>
+        </label>
 
             <!-- ************************************************************** Enable Sticky Tabs -->
             <label class="list_element toggle">
-            <div class="stacked_text">
-              <h3>Enable Sticky Tabs</h3>
-              <h4>Ctrl + click to place</h4>
-            </div>
-            <input class="toggle-checkbox" id="enable_sticky_tabs_checkbox" type="checkbox"/>
-            <div class="toggle-switch"></div>
-          </label>
+          <div class="stacked_text">
+            <h3>Enable Sticky Tabs</h3>
+            <h4>Ctrl + click to add/remove</h4>
+          </div>
+          <input
+            class="toggle-checkbox"
+            id="enable_sticky_tabs_checkbox"
+            type="checkbox"
+          />
+          <div class="toggle-switch"></div>
+        </label>
         </div>
     </div>
 
