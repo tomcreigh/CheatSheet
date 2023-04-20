@@ -327,6 +327,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     // console.log(font);
     if (font !== "clear" && font !== "undefined") {
       UpdateFont(font);
+    } else {
+      ClearFonts();
     }
   } else if (request.message.startsWith("remove_distractions_")) {
     if (request.message.endsWith("true")) {
